@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>jp.te4a.spring.boot</groupId>
-	<artifactId>MyBootApp7</artifactId>
+	<artifactId>MyBootApp6</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>MyBootApp7</name>
+	<name>MyBootApp6</name>
 	<description>Demo project for Spring Boot</description>
 
 	<parent>
@@ -44,11 +44,12 @@
         	<groupId>org.springframework.boot</groupId>
         	<artifactId>spring-boot-starter-web</artifactId>
     	</dependency>
-
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-thymeleaf</artifactId>
-		</dependency>
+    	<dependency>
+        	<groupId>org.apache.tomcat.embed</groupId>
+        	<artifactId>tomcat-embed-jasper</artifactId>
+        	<scope>provided</scope>
+    	</dependency>
+		
 	</dependencies>
 
 	<build>
