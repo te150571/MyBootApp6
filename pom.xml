@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>jp.te4a.spring.boot</groupId>
-	<artifactId>MyBootApp9</artifactId>
+	<artifactId>MyBootApp10</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>MyBootApp9</name>
+	<name>MyBootApp10</name>
 	<description>Demo project for Spring Boot</description>
 
 	<parent>
@@ -56,9 +56,9 @@
 		</dependency>
 		
 		<dependency>
-			<groupId>com.h2database</groupId>
-			<artifactId>h2</artifactId>
-			<scope>runtime</scope>
+    		<groupId>org.mariadb.jdbc</groupId>
+    		<artifactId>mariadb-java-client</artifactId>
+    		<version>2.2.4</version>
 		</dependency>
 		
 	</dependencies>
