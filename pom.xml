@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>jp.te4a.spring.boot</groupId>
-	<artifactId>MyBootApp9</artifactId>
+	<artifactId>MyBootApp11</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>MyBootApp9</name>
+	<name>MyBootApp11</name>
 	<description>Demo project for Spring Boot</description>
 
 	<parent>
