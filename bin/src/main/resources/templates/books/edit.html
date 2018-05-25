@@ -3,14 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <title>書籍編集画面</title>
+<link rel="stylesheet" type="text/css" href="../../static/css/style.css" th:href="@{/css/style.css}" />
 </head>
 <body>
 	<form th:action="@{/books/edit}" th:object="${bookForm}" method="post">
 		<table>
-			<tr><td>Title:</td><td><input type="text" name="title" th:field="*{title}" /></td></tr>
-			<tr><td>Author:</td><td><input type="text" name="author" th:field="*{author}" /></td></tr>
-			<tr><td>Publisher:</td><td><input type="text" name="publisher" th:field="*{publisher}" /></td></tr>
-			<tr><td>Price:</td><td><input type="text" name="price" th:field="*{price}" /></td></tr>
+			<tr><td>Title:</td><td><input type="text" name="title" th:field="*{title}"  th:errorclass="error-input" /><span th:if="${#fields.hasErrors('title')}" th:errors="*{title}" class="error-messages">error!</span></td></tr>
+			<tr><td>Author:</td><td><input type="text" name="author" th:field="*{author}" th:errorclass="error-input" /><span th:if="${#fields.hasErrors('author')}" th:errors="*{author}" class="error-messages">error!</span></td></tr>
+			<tr><td>Publisher:</td><td><input type="text" name="publisher" th:field="*{publisher}" th:errorclass="error-input" /><span th:if="${#fields.hasErrors('publisher')}" th:errors="*{publisher}" class="error-messages">error!</span></td></tr>
+			<tr><td>Price:</td><td><input type="text" name="price" th:field="*{price}" th:errorclass="error-input" /><span th:if="${#fields.hasErrors('price')}" th:errors="*{price}" class="error-messages">error!</span></td></tr>
 		</table>
 		<input type="hidden" name="id" th:value="${param.id[0]}" />
 		<input type="submit" name="goToTop" value="Back" />
