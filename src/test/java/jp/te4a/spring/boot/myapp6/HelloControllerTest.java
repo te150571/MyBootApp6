@@ -36,11 +36,18 @@ public class HelloControllerTest {
 		
 		// indexメソッドのテスト
 		@Test
-		public void HelloTestIndex()throws Exception {
+		public void index_正常系_メッセージが渡される()throws Exception {
 			mockMvc.perform(get("/"))
 				.andExpect(status().isOk())
-				.andExpect(model().attributeExists())
-				.andExpect(model().attribute("msg", is("This is setting message.")))
+				.andExpect(model().attributeExists("msg"))
+				.andExpect(model().attribute("msg", is("This is setting message.")));
+		}
+		
+		// indexメソッドのテスト
+		@Test
+		public void index_正常系_初期ページに戻る()throws Exception {
+			mockMvc.perform(get("/"))
+				.andExpect(status().isOk())
 				.andExpect(view().name("index"));
 		}
 		

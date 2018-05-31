@@ -1,0 +1,7 @@
+---
+applications:
+- name: MyBootApp6
+  random-route: true
+  path: target/MyBootApp6-0.0.1-SNAPSHOT.war
+  memory: 256M
+  instances: 1
